@@ -1,0 +1,40 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+#define LEN 50
+
+char main(){
+	char *input=NULL,*reverse=NULL;
+	char d[LEN]={0};
+	input = (char*)malloc(LEN*sizeof(char));
+	reverse = (char*)malloc(LEN*sizeof(char));
+	
+	Start:
+	
+	printf(">");
+	scanf("%s",input);//Input the sentence
+	char b[LEN]={0};
+	strcpy(b,input);//Copy the sentence to array b
+	int mem=strlen(b);//Define the sentence length
+	char SaveOut[]={0};
+	SaveOut[mem]={0};
+	if(reverse=strrchr(input,'hi')!=NULL){
+		reverse=strrchr(input,'hi');
+		int n=0;
+		while(reverse<reverse+2)//Change 2 to length of the key
+		{
+			n++;
+   	 		SaveOut[n]=putchar(*(reverse-1));
+   			reverse++;
+   			printf("%s",SaveOut);
+    		if(n==2){
+    			break;
+			}
+		}
+		return SaveOut;
+	}
+	else{
+		goto Start;
+	}
+		return 
+}
